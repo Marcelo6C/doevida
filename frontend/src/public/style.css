@@ -1,0 +1,185 @@
+/*
+geral
+*/
+*{
+  box-sizing: border-box;
+}
+
+body, html{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  
+  animation-name: fade;
+  animation-duration: 0.9s;
+}
+
+/*
+titulos
+*/
+header h1, main h2{
+  margin-bottom: 70px;
+}
+
+.form h2{
+  text-align: right;
+  color: #ffffffee;
+  font-size: 18px;
+}
+
+main span{
+  color: #ff4f4f;
+}
+
+/*
+blocos
+*/
+header, main, footer{
+  text-align: center;
+  align-items: center;
+
+}
+
+header, .form, main{
+  margin: 0 auto 70px auto;
+  width: 90%;
+  max-width: 500px;
+}
+
+/*
+header
+*/
+header button{
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #ff4f4f;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin-top: 8px;
+  outline: none;
+}
+
+.logo{
+  width: 120px;
+  margin: 70px 0;
+}
+
+header p{
+  font-size: 14px;
+}
+
+/*
+formulário
+*/
+section.form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 45px;
+  background-color: #ff4f4f;
+  padding: 16px 64px;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.form input, .form button{
+  width: 100%;
+  padding: 8px 16px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid #ffffff88;
+}
+
+form input{
+  background-color: transparent;
+  animation-name: transição;
+  animation-duration: 2s;
+}
+
+form input::placeholder{
+  color: #ffffffaa;
+}
+
+form button{
+  font-weight: bold;
+}
+
+/*
+doador
+*/
+.donors{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.blood{
+  color: #ff4f4f;
+  font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.blood::before{
+  content: "";
+  background-color: #ff4f4f11;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border-radius: 50%;
+  border-top-right-radius: 0;
+  transform: rotate(310deg);
+}
+
+.donor p{
+  margin-top: 24px;
+  font-size: 14px;
+  margin-bottom: 64px;
+}
+
+/*
+rodapé
+*/
+footer{
+  margin-top: auto;
+  padding: 16px;
+  border: 1px solid #eee;
+}
+
+/*
+funcionalidade js
+*/
+section.form{
+  transition: all 600ms;
+}
+
+section.form.hide{
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  margin-top: -120px;
+}
+
+/*
+ANIMAÇÕES
+*/
+
+@keyframes fade {
+  from{
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
